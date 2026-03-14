@@ -10,13 +10,30 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 3px rgba(0, 0, 0, 0.5);
     padding: 30px 100px;
 }
 
 main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+footer {
+    background-color: #333333;
+    padding: 20px 0;
+    text-align: center;
+    color: #d6edfb;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.size-change-div {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    top: 184px;
+    background-color: #fff;
 }
 
 .btn {
@@ -50,12 +67,12 @@ main {
 }
 
 .canvas {
+    position: relative;
     display: flex;
     justify-content: center;
     background: linear-gradient(181deg, #bfe5f5 0%, #c6eee8 100%);
     padding-top: 46px;
 }
-
 
 .settings {
     display: flex;
@@ -68,6 +85,7 @@ main {
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.05);
+    padding: 50px 33px;
 }
 
 .size-fixed {
@@ -158,11 +176,14 @@ main {
 
 hr {
     margin: 40px 0;
-    background: #4c7792;
+    height: 1px;
+    background-color: #7c9bac;
+    border: none;
 }
 
 .options {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -194,38 +215,99 @@ hr {
 }
 
 .options label input {
-    /* Прибираємо дефолтний вигляд */
-    appearance: none; 
+    appearance: none;
     -webkit-appearance: none;
-    
-    /* Малюємо свій квадратик */
-    width: 20px;
-    height: 20px;
-    border: 2px solid #4c7792; /* Твій колір */
-    border-radius: 5px;        /* Закруглення кутів */
+    width: 25px;
+    height: 25px;
+    border: 3px solid #4c7792;
+    border-radius: 5px;
     background-color: white;
     display: grid;
-    place-content: center;     /* Для центрування галочки */
+    place-content: center;
     transition: 0.2s;
-    flex-shrink: 0;            /* Щоб чекбокс не сплющувався */
+    flex-shrink: 0;
 }
 
-/* Стиль при кліку (checked) */
 .options label input:checked {
     background-color: #4c7792;
 }
 
-/* Малюємо галочку всередині через псевдоелемент */
 .options label input::before {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em white; /* Колір галочки */
+    box-shadow: inset 1em 1em white;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
 .options label input:checked::before {
     transform: scale(1);
+}
+
+.h1-add {
+    margin-bottom: 31px;
+}
+
+.options p {
+    font-size: 18px;
+    padding-bottom: 18px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.options p:last-child {
+    padding-bottom: 15px;
+}
+
+.buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 22px 0 0;
+    background-color: #d6edfb79;
+}
+
+.buy-btn {
+    display: block;
+    padding: 25px 55px;
+    border-radius: 10px;
+    background-color: #56c107;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.buy p {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 700;
+    text-align: center;
+}
+
+.buy span {
+    /* font-size: 48px; */
+    color: #56c107;
+    text-align: center;
+}
+
+.hrn {
+    text-transform: lowercase;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.sum {
+    font-size: 48px;
+    color: #56c107;
+    font-weight: 700;
+    text-align: center;
 }

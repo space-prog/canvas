@@ -29,67 +29,80 @@
     <main>
         <div class="canvas">
             <img src="img/canvas.png" alt="">
+            <div class="size-change-div"></div>
         </div>
         <div class="settings">
             <div class="settings-block">
                 <h1>Виберіть розмір</h1>
                 <div class="size-fixed">
                     <label>
-                        <input type="radio" name="fixed-radio">
+                        <input type="radio" name="fixed-radio" id="first-fixed" value="30x30">
                         <span>30х30</span>
                     </label>
                     <label>
-                        <input type="radio" name="fixed-radio">
+                        <input type="radio" name="fixed-radio" id="second-fixed" value="30x90">
                         <span>30х90</span>
                     </label>
                     <label>
-                        <input type="radio" name="fixed-radio">
+                        <input type="radio" name="fixed-radio" id="third-fixed" value="90x120">
                         <span>90х120</span>
                     </label>
                     <label>
-                        <input type="radio" name="fixed-radio">
+                        <input type="radio" name="fixed-radio" id="fourth-fixed" value="90x150">
                         <span>90x150</span>
                     </label> 
-                    <a href="#" class="size-btn">Задати розмір</a>
+                    <a href="#" class="size-btn" id="fixedSizeBtn">Задати розмір</a>
                 </div>
                 <div class="size-user">
                     <div>
                         <p>Ширина</p>
-                        <input type="number" name="" id="" min="1" max="450">
+                        <input type="number" name="" id="width" min="1" max="450">
                     </div>
                     <span class="cross">X</span>
                     <div>
                         <p>Висота</p>
-                        <input type="number" name="" id="" min="1" max="450">
+                        <input type="number" name="" id="height" min="1" max="450">
                     </div>
-                    <a href="#" class="size-btn">Підрахувати</a>
+                    <a href="#" class="size-btn" id="size-btn">Підрахувати</a>
                 </div>
                 <hr>
-                <h1>Додаткові Опції</h1>
+                <h1 class="h1-add">Додаткові Опції</h1>
                 <div class="options">
                     <div>
                         <label>
                             <input type="checkbox" name="" id="">
                             <span class="checkmark"></span>
-                            <span>дорожче полотно</span>
+                            <span>Дорожче полотно</span>
                         </label>
                         <label>
                             <input type="checkbox" name="" id="">
                             <span class="checkmark"></span>
-                            <span>дорожче полотно</span>
+                            <span>З рамкою</span>
                         </label>
                         <label>
                             <input type="checkbox" name="" id="">
                             <span class="checkmark"></span>
-                            <span>дорожче полотно</span>
+                            <span>З доставкою (Нова Пошта)</span>
                         </label>
                     </div>
-                    <div></div>
+                    <div>
+                        <p>+35 грн</p>
+                        <p>+10 грн</p>
+                        <p>+40 грн</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="buy">
+                    <a href="#" class="buy-btn">придбати</a>
+                    <p>Загальна сума: <span class="sum">345 <span class="hrn">грн</span></span></p>
                 </div>
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        © Kanvas. Всі права захищені
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
