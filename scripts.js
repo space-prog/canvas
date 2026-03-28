@@ -51,20 +51,67 @@ userSizeBtn.onclick = (e) => {
         h = inputHeight.value;
 
     if (w > 0 && h > 0) {
-        sizeChangeDiv.style.width = w * 5 + "px";
-        sizeChangeDiv.style.height = h * 5 + "px";
-        
+        sizeChangeDiv.style.width = w + "px";
+        sizeChangeDiv.style.height = h + "px";
+
         currentBasePrice = h * 2;
         calculateFullTotal();
     }
 }
 
-fixed1.onclick = () => { currentBasePrice = 60;  sizeChangeDiv.style.width = "150px"; sizeChangeDiv.style.height = "150px"; calculateFullTotal(); }
-fixed2.onclick = () => { currentBasePrice = 180; sizeChangeDiv.style.width = "150px"; sizeChangeDiv.style.height = "450px"; calculateFullTotal(); }
-fixed3.onclick = () => { currentBasePrice = 240; sizeChangeDiv.style.width = "450px"; sizeChangeDiv.style.height = "600px"; calculateFullTotal(); }
-fixed4.onclick = () => { currentBasePrice = 300; sizeChangeDiv.style.width = "450px"; sizeChangeDiv.style.height = "750px"; calculateFullTotal(); }
+fixed1.onclick = () => {
+    currentBasePrice = 60;
+    sizeChangeDiv.style.width = "150px";
+    sizeChangeDiv.style.height = "150px";
+    calculateFullTotal();
+}
+fixed2.onclick = () => {
+    currentBasePrice = 180;
+    sizeChangeDiv.style.width = "150px";
+    sizeChangeDiv.style.height = "450px";
+    calculateFullTotal();
+}
+fixed3.onclick = () => {
+    currentBasePrice = 240;
+    sizeChangeDiv.style.width = "450px";
+    sizeChangeDiv.style.height = "600px";
+    calculateFullTotal();
+}
+fixed4.onclick = () => {
+    currentBasePrice = 300;
+    sizeChangeDiv.style.width = "450px";
+    sizeChangeDiv.style.height = "750px";
+    calculateFullTotal();
+}
 
 
 add1.onchange = calculateFullTotal;
 add2.onchange = calculateFullTotal;
 add3.onchange = calculateFullTotal;
+
+
+const hidBlock = document.querySelector(".hid-bd")
+
+bd.onchange = () => {
+    if (hidBlock && bd.checked) {
+        hidBlock.style.display = "block"
+        const styleBd = hidBlock.querySelectorAll(".bd-style")
+        if (styleBd) {
+            styleBd.forEach(item => {
+                item.addEventListener("change", function (e) {
+                    if (item.checked) {
+                        let bds = item.value
+                        sizeChangeDiv.style.border = `5px ${bds} #000`
+                    }
+                })
+            })
+        }
+        color.oninput = () => {
+            sizeChangeDiv.style.borderColor = color.value
+        }
+    } else {
+        hidBlock.style.display = "none"
+        sizeChangeDiv.style.border = "none"
+    }
+
+}
