@@ -16,6 +16,19 @@ let inputWidth = document.getElementById("width"),
 
 let currentBasePrice = 0;
 
+inputWidth.oninput = () => {
+    if (inputWidth.value > 520) {
+        alert("Ви ввели завеликий розмір холста, максимальний розмір 520х520")
+        inputWidth.value = 0
+    }
+}
+inputHeight.oninput = () => {
+    if (inputHeight.value > 520) {
+        alert("Ви ввели завеликий розмір холста, максимальний розмір 520х520")
+        inputHeight.value = 0
+    }
+}
+
 function calculateFullTotal() {
     let total = currentBasePrice;
 

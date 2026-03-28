@@ -31,10 +31,15 @@ footer {
 .size-change-div {
     position: absolute;
     transition: all .5s ease;
-    width: 520px;
-    height: 520px;
-    top: 184px;
+    bottom: 0;
     background-color: #fff;
+}
+.size-change-div2 {
+    position: absolute;
+    transition: all .5s ease;
+    height: 520px;
+    width: 520px;
+    top: 184px;
 }
 
 .btn {

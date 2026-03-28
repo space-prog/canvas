@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -29,31 +31,33 @@
     <main>
         <div class="canvas">
             <img src="img/canvas.png" alt="">
-            <div class="size-change-div"></div>
+            <div class="size-change-div2">
+                <div class="size-change-div"></div>
+            </div>
         </div>
         <div class="settings">
             <div class="settings-block">
                 <h1>Виберіть розмір</h1>
                 <div class="size-fixed">
                     <label>
-                        <input type="radio" name="fixed-radio" id="fixed1" value="30x30" >
+                        <input type="radio" name="fixed-radio" id="fixed1" value="30x30">
                         <span>30х30</span>
                     </label>
                     <label>
-                        <input type="radio" name="fixed-radio" id="fixed2" value="30x90" >
+                        <input type="radio" name="fixed-radio" id="fixed2" value="30x90">
                         <span>30х90</span>
                     </label>
                     <label>
-                        <input type="radio" name="fixed-radio" id="fixed3" value="90x120" >
+                        <input type="radio" name="fixed-radio" id="fixed3" value="90x120">
                         <span>90х120</span>
                     </label>
                     <label>
-                        <input type="radio" name="fixed-radio" id="fixed4" value="90x150" >
+                        <input type="radio" name="fixed-radio" id="fixed4" value="90x150">
                         <span>90x150</span>
-                    </label> 
+                    </label>
                     <a href="#" class="size-btn" id="fixedSizeBtn">Задати розмір</a>
                 </div>
-                <div class="size-user">
+                <div class="size-user hidden">
                     <div>
                         <p>Ширина</p>
                         <input type="number" name="" id="width" min="1" max="450">
